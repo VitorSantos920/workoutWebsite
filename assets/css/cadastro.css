@@ -1,0 +1,137 @@
+@import url(./global.css);
+
+body {
+    background-color: var(--black);
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+    width: 0.75rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0.75rem;
+    background: var(--button);
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 0.75rem;
+    background-color: var(--text1);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+main .banner {
+    width: 50%;
+    min-width: 580px;
+}
+
+main .banner img {
+    max-width: 100%;
+    height: auto;
+}
+
+main .form-content {
+    flex-grow: 1;
+    padding: 1.75rem 2rem 1.75rem 0;
+    max-width: 1000px;
+}
+
+main .form-content header {
+    margin-bottom: 2.5rem;
+}
+
+main .form-content header h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+main label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+main input {
+    background-color: transparent;
+    padding: 1.25rem;
+    width: 100%;
+    border: 2.48px solid var(--text1);
+    border-radius: 0.5rem;
+    outline: 0;
+    color: var(--text1);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+main fieldset {
+    margin-top: 1.5rem;
+}
+
+main .form-content .password-content {
+    display: flex;
+    gap: 1.5rem;
+}
+
+main .form-content .password-content fieldset {
+    flex-grow: 1;
+}
+
+main .form-content button[type='submit'] {
+    width: 100%;
+    margin-top: 1.75rem;
+    background-color: var(--button);
+    color: var(--text1);
+    padding: 1.25rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: 250ms;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+main .form-content button[type='submit']:hover {
+    transform: scale(1.05);
+    background-color: #ff9382;
+}
+
+main .form-content button[type='submit'] + p {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+main .form-content button[type='submit'] + p a {
+    color: var(--link);
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .banner {
+        display: none;
+    }
+
+    main .form-content {
+        padding: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main .form-content .password-content {
+        flex-direction: column;
+    }
+}
