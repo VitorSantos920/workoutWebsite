@@ -1,0 +1,71 @@
+@import url(./variables.css);
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.container-imagem{
+    width: 60%;
+    height: auto;
+    border: 1px solid red;
+}
+
+.container-imagem img{
+    width: 100%;
+
+}
+
+.container-login{
+    width: 40%;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+}
+
+.box{
+    width: 60%;
+    border: 1px solid red;
+}
+
+.box h1{
+    font-size: 4rem;
+}
+
+.box :is(p, label){
+    font-size: 1.6rem;
+}
+
+fieldset{
+    border: none;
+}
+
+form input{
+    padding: 1rem;
+}
+
+form button{
+    background-color: var(--button);
+    width: 100%;
+    padding: 2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.box span{
+    margin: 0 auto;
+}
+
+
+
+
+
