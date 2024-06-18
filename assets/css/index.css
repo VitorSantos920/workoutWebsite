@@ -1,6 +1,74 @@
 @import url(./global.css);
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 
 body {
     background-color: var(--black);
+    font-family: 'Inter', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+nav {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5rem;
+    color: var(--text1);
+    text-transform: uppercase;
+}
+nav li{
+    margin: 0 1.5rem;
+    display: inline;
+}
+nav li a{
+    font-size: 1.2rem;
+}
+nav a{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.section1{
+    background-image: url(../img/hero.png);
+    
+    margin-top:16rem;
+    margin-left: 13rem;
+    margin-right: 3rem;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: contain;
+    font-family: 'Inter', sans-serif;
+}
+.section1 h1{
+    width: 70%;
+    text-transform: uppercase;
+    font-size: 15rem;
+    color: var(--text1);
+    line-height: 12rem;
+    font-weight: 600;
+}
+.section1 p{
+    width: 30%;
+    letter-spacing: 0.5px;
+    color: var(--text2);
+   font-size: 1.6rem;
+}
+.section1 button{
+    margin-top: 5rem;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--button);
+    padding: 1.9rem 2rem;
+    border-radius: 10px;
+    border: none;
+
+}
+
+.section1 .brand{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 }
