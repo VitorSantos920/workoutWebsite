@@ -26,16 +26,24 @@
     </nav>
 
     <div class="section1">
-        <h1>Treine comigo</h1>
-        <p>Uma enorme seleção de conteúdo de saúde e fitness, receitas saudáveis ​​e histórias de transformação para ajudar você a ficar em forma e permanecer em forma!</p>
-        <button>Inscreva-se já</button>
-        <div class="brands">
-            <img src="assets/img/nike.svg" />
-            <img src="assets/img/buzzfeed.svg" />
-            <img src="assets/img/esprit.svg" />
-            <img src="assets/img/natgeo.svg" />
-            <img src="assets/img/dwff.svg" />
-            <img src="assets/img/huffpost.svg" />
+        <div class="conteudo">
+            <h1>Treine comigo</h1>
+            <p>Uma enorme seleção de conteúdo de saúde e fitness, receitas saudáveis ​​e histórias de transformação para ajudar você a ficar em forma e permanecer em forma!</p>
+            <button>Inscreva-se já</button>
+            <div class="bottom">
+                <p>Patrocinado por</p>
+                <div class="brands">
+                    <img src="assets/img/nike.svg" />
+                    <img src="assets/img/buzzfeed.svg" />
+                    <img src="assets/img/esprit.svg" />
+                    <img src="assets/img/natgeo.svg" />
+                    <img src="assets/img/dwff.svg" />
+                    <img src="assets/img/huffpost.svg" />
+                </div>
+            </div>
+        </div>
+        <div class="img-hero">
+            <img src="assets/img/hero.png" />
         </div>
     </div>
 </body>
