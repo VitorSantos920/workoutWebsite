@@ -1,11 +1,10 @@
 @import url(./global.css);
 
-
 body {
     background-color: var(--black);
     font-family: 'Inter', sans-serif;
 }
-html{
+html {
     font-size: 62.5%;
 }
 nav {
@@ -17,44 +16,41 @@ nav {
     color: var(--text1);
     text-transform: uppercase;
 }
-nav li{
+nav li {
     margin: 0 1.5rem;
     display: inline;
 }
-nav li a{
+nav li a {
     font-size: 1.2rem;
 }
-nav a{
+nav a {
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
     font-weight: 600;
 }
-.section1{
-    background-image: url(../img/hero.png);
-    
-    margin-top:16rem;
-    margin-left: 13rem;
-    margin-right: 3rem;
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: contain;
+.section1 {
+    display: flex;
+    margin-top: 16rem;
+    padding: 0 8rem;
     font-family: 'Inter', sans-serif;
+    border: 1px solid red;
 }
-.section1 h1{
+.section1 h1 {
     width: 70%;
     text-transform: uppercase;
     font-size: 15rem;
     color: var(--text1);
     line-height: 12rem;
     font-weight: 600;
+    margin-bottom: 4rem;
 }
-.section1 p{
-    width: 30%;
+.section1 p {
+    width: 60%;
     letter-spacing: 0.5px;
     color: var(--text2);
-   font-size: 1.6rem;
+    font-size: 1.6rem;
 }
-.section1 button{
+.section1 button {
     margin-top: 5rem;
     color: #ffffff;
     font-size: 1.8rem;
@@ -64,11 +60,28 @@ nav a{
     padding: 1.9rem 2rem;
     border-radius: 10px;
     border: none;
-
+    margin-bottom: 7rem;
 }
-
-.section1 .brand{
+.section1 .conteudo .bottom p {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+.section1 .brand {
     display: flex;
     flex-direction: row;
     gap: 1rem;
+}
+.img-hero {
+    width: 53%;
+    border: 1px solid blue;
+}
+.img-hero img {
+    height: auto;
+    max-width: 100%;
+}
+.conteudo {
+    width: 60%;
 }
