@@ -20,7 +20,7 @@
                 <h1>Entrar</h1>
                 <p>Entre com suas credenciais inseridas na hora do registro.</P>
             </header>
-            <form action="#" method="post">
+            <form>
                 <fieldset>
                     <label for="email">Email:</label>
                     <input type="text" name="email" id="email" placeholder="example@mail.com" required />
@@ -29,7 +29,7 @@
                     <label for="senha">Senha:</label>
                     <input type="password" name="senha" id="senha" placeholder="***********" required />
                 </fieldset>
-                <button type="submit">Entrar em minha conta</button>
+                <button type="button" onclick="realizarLogin()">Entrar em minha conta</button>
                 <div class="formata-esquerda">
                     <a href="#">Esqueceu sua senha?</a>
                 </div>
@@ -45,6 +45,10 @@
             </footer>
         </section>
     </main>
+
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/sweetalert2@11.js"></script>
+    <script src="./assets/js/login.js"></script>
 </body>
 
 </html>

@@ -20,6 +20,22 @@ body {
     background-color: var(--text1);
 }
 
+body div:where(.swal2-container) div:where(.swal2-popup) {
+    color: var(--text1);
+    background-color: var(--black);
+    border: 3px solid var(--button);
+}
+
+body div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    background-color: var(--button);
+}
+
+body
+    div:where(.swal2-container)
+    button:where(.swal2-styled).swal2-confirm:focus-visible {
+    box-shadow: none;
+}
+
 main {
     display: flex;
     align-items: center;
@@ -151,18 +167,18 @@ main .footer a {
     color: #4d4d4d;
 }
 
-main .form-content :is(button[type='submit'], .button-criarConta):hover {
+main .form-content :is(button[type='button'], .button-criarConta):hover {
     transform: scale(1.05);
     background-color: #ff9382;
 }
 
-main .form-content :is(button[type='submit'], .button-criarConta) + p {
+main .form-content :is(button[type='button'], .button-criarConta) + p {
     text-align: center;
     font-weight: bold;
     margin-top: 1rem;
 }
 
-main .form-content :is(button[type='submit'], .button-criarConta) + p a {
+main .form-content :is(button[type='button'], .button-criarConta) + p a {
     color: var(--link);
     text-decoration: underline;
 }

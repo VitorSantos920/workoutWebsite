@@ -2,7 +2,7 @@
 require_once "../app/config.php";
 
 if (!isset($_POST['email'])) {
-  header('Location: ./cadastro.php');
+  header('Location: ../cadastro.php');
   exit;
 }
 

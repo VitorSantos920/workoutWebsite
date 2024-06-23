@@ -40,7 +40,7 @@
                 <div class="password-content">
                     <fieldset>
                         <label for="senha">Senha</label>
-                        <input type="text" name="senha" id="senha" placeholder="***********" required oninput="verificaSenha(this.value)">
+                        <input type="password" name="senha" id="senha" placeholder="***********" required oninput="verificaSenha(this.value)">
                         <div class="requisitos">
                             <p id="has-seven">* 7 caracteres</p>
                             <p id="has-number">* 1 número</p>
@@ -53,7 +53,7 @@
                         <label for="confirmar-senha">Confirmar senha</label>
 
                         <div class="password-confirmation-container">
-                            <input type="text" name="confirmar-senha" id="confirmar-senha" placeholder="***********" required oninput="verificaCorrespondencia()">
+                            <input type="password" name="confirmar-senha" id="confirmar-senha" placeholder="***********" required oninput="verificaCorrespondencia()">
                             <i class="fa-regular fa-circle-check"></i>
                             <i class="fa-regular fa-circle-xmark"></i>
                         </div>
