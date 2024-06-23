@@ -1,5 +1,5 @@
 :root {
-    --link: #0070c9;
+    --link: #54b2ff;
     --black: #171717;
     --text1: #fafaf9;
     --text2: #efede8;
@@ -11,4 +11,6 @@
     --shapeSecondary2: #232532;
     --shapeSecondary3: #323443;
     --shapeSecondary4: #4f5261;
+    --invalid: #ff3e3e;
+    --valid: #63ff63;
 }

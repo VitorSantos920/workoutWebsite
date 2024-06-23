@@ -68,6 +68,13 @@ main input {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 1rem;
+    transition: 250ms;
+}
+
+main input:focus {
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-color: var(--button);
 }
 
 main fieldset {
@@ -84,7 +91,7 @@ main .form-content .password-content fieldset {
     flex-grow: 1;
 }
 
-main .form-content button:not(.button-criarConta){
+main .form-content button:not(.button-criarConta) {
     width: 100%;
     margin-top: 1.75rem;
     margin-bottom: 1.75rem;
@@ -100,67 +107,62 @@ main .form-content button:not(.button-criarConta){
     font-weight: bold;
 }
 
-.button-criarConta{
+.button-criarConta {
     width: 100%;
     padding: 1.25rem;
     margin-top: 0.75rem;
     border: none;
     border-radius: 0.4rem;
     font-family: 'Inter', sans-serif;
+    display: block;
+    text-align: center;
     cursor: pointer;
     transition: 250ms;
     font-size: 1.25rem;
     font-weight: bold;
     background-color: var(--shape2);
     color: var(--text1);
-
 }
 
-main .formata-esquerda{
+main .formata-esquerda {
     display: flex;
     justify-content: end;
     margin-bottom: 3rem;
 }
 
-main .formata-esquerda a{
-    transition: 250ms;
+main .formata-esquerda a:hover {
+    text-decoration: underline;
 }
 
-main .formata-esquerda a:hover{
-    transform: scale(1.05);
-    color: #ff9382;
-    cursor: pointer;
-}
-
-main .formata-span-meio{
+main .formata-span-meio {
     display: flex;
     justify-content: center;
 }
 
-main .footer{
+main .footer {
     margin-top: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-main .footer span{
+main .footer a {
     font-size: 0.75rem;
-    color: #4D4D4D;
+    color: #4d4d4d;
 }
 
-main .form-content button[type='submit']:hover {
+main .form-content :is(button[type='submit'], .button-criarConta):hover {
     transform: scale(1.05);
     background-color: #ff9382;
 }
 
-main .form-content button[type='submit'] + p {
+main .form-content :is(button[type='submit'], .button-criarConta) + p {
     text-align: center;
     font-weight: bold;
     margin-top: 1rem;
 }
 
-main .form-content button[type='submit'] + p a {
+main .form-content :is(button[type='submit'], .button-criarConta) + p a {
     color: var(--link);
     text-decoration: underline;
 }

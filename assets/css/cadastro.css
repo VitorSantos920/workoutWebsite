@@ -20,6 +20,22 @@ body {
     background-color: var(--text1);
 }
 
+body div:where(.swal2-container) div:where(.swal2-popup) {
+    color: var(--text1);
+    background-color: var(--black);
+    border: 3px solid var(--button);
+}
+
+body div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    background-color: var(--button);
+}
+
+body
+    div:where(.swal2-container)
+    button:where(.swal2-styled).swal2-confirm:focus-visible {
+    box-shadow: none;
+}
+
 main {
     display: flex;
     align-items: center;
@@ -58,16 +74,49 @@ main label {
 }
 
 main input {
-    background-color: transparent;
-    padding: 1.25rem;
     width: 100%;
-    border: 2.48px solid var(--text1);
-    border-radius: 0.5rem;
+    padding: 1.25rem;
     outline: 0;
+    background-color: transparent;
     color: var(--text1);
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     font-size: 1rem;
+    transition: 250ms;
+    border-radius: 0.5rem;
+    border: 2.48px solid var(--text1);
+}
+
+main input:focus {
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-color: var(--button);
+}
+
+main input#confirmar-senha {
+    padding-right: 2.75rem;
+}
+
+main div:has(> input#confirmar-senha) {
+    padding: 0;
+    position: relative;
+}
+
+main div:has(> input#confirmar-senha) svg {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    display: none;
+}
+
+main div:has(> input#confirmar-senha) svg.fa-circle-xmark {
+    color: var(--invalid);
+}
+
+main div:has(> input#confirmar-senha) svg.fa-circle-check {
+    color: var(--valid);
 }
 
 main fieldset {
@@ -84,7 +133,27 @@ main .form-content .password-content fieldset {
     flex-grow: 1;
 }
 
-main .form-content button[type='submit'] {
+main .form-content .password-content fieldset .requisitos {
+    margin-top: 0.5rem;
+}
+
+main .form-content .password-content fieldset .requisitos p {
+    font-size: 0.85rem;
+}
+
+main .form-content .password-content fieldset .requisitos p:not(p:first-child) {
+    margin-top: 0.45rem;
+}
+
+main .form-content .password-content fieldset .requisitos p.valid {
+    color: var(--valid);
+}
+
+main .form-content .password-content fieldset .requisitos p.invalid {
+    color: var(--invalid);
+}
+
+main .form-content button[type='button'] {
     width: 100%;
     margin-top: 1.75rem;
     background-color: var(--button);
@@ -99,20 +168,31 @@ main .form-content button[type='submit'] {
     font-weight: bold;
 }
 
-main .form-content button[type='submit']:hover {
+main .form-content button[type='button']:hover {
     transform: scale(1.05);
     background-color: #ff9382;
 }
 
-main .form-content button[type='submit'] + p {
+main .form-content button[type='button'] + p {
     text-align: center;
-    font-weight: bold;
     margin-top: 1rem;
 }
 
-main .form-content button[type='submit'] + p a {
+main .form-content button[type='button'] + p a {
     color: var(--link);
     text-decoration: underline;
+}
+
+div.footer {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.footer a {
+    font-size: 0.75rem;
+    color: #4d4d4d;
 }
 
 @media screen and (min-width: 1920px) {
