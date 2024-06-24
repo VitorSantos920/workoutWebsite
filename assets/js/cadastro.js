@@ -116,6 +116,10 @@ function cadastrarUsuario() {
                         response.swalMessage,
                         1500
                     );
+
+                    setTimeout(() => {
+                        window.location.href = './home.php';
+                    }, 1500);
                     break;
                 case 0:
                     sweetAlert('info', 'Email existente', response.swalMessage);
