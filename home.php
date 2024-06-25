@@ -1,4 +1,6 @@
 <?php
+require_once "./app/config.php";
+
 session_start([
   'cookie_lifetime' => 86400
 ]);
@@ -7,6 +9,8 @@ if (!isset($_SESSION['session_id']) || !isset($_SESSION['email'])) {
   header('Location: ./login.php');
   exit;
 }
+
+$dadosUsuario = DB::queryFirstRow("SELECT * FROM usuario WHERE usuario.email = %s", $_SESSION['email']);
 
 ?>
 <!DOCTYPE html>
@@ -21,12 +25,46 @@ if (!isset($_SESSION['session_id']) || !isset($_SESSION['email'])) {
 </head>
 
 <body>
-  <h1>home</h1>
   <?php
-  var_dump($_SESSION);
+  include_once "./cabecalho.php";
   ?>
+  <main style="padding: 0 3rem; max-width: 1366px; margin: 0 auto;">
+    <section class="profile-initial">
+      <i class="fa-solid fa-hand-fist"></i>
+      <a href="profile.php">
+        <h1> Seja bem-vindo, <?php echo $dadosUsuario['nome'] ?>!</h1>
+        <p>Pronto para alcançar seus objetivos hoje?</p>
+      </a>
+    </section>
+    <section class="informations">
+      <h2><i class="fa-solid fa-circle-info"></i> Suas Informações</h2>
+      <p>Email: <?php echo $dadosUsuario['email'] ?></p>
+      <p>Telefone: <?php echo $dadosUsuario['telefone'] ?></p>
+      <p>Cadastrou-se em: <?php echo date('d/m/Y h:i:s', strtotime($dadosUsuario['cadastrado_em'])) ?></p>
+    </section>
 
-  <a href="./logout.php">logout</a>
+    <section class="progress-training">
+      <div class="progress">
+        <h2><i class="fa-solid fa-chart-simple"></i> Seu Progresso</h2>
+        <p>Peso Atual: 65kg</p>
+        <p>Meta: 78.5kg</p>
+        <p>Dias de Treino na Semana: 4</p>
+        <p>Último Treino: 24/06/2024</p>
+      </div>
+      <div class="training">
+        <h2><i class="fa-solid fa-dumbbell"></i> Plano de Treino</h2>
+        <p class="plan">Plano Atual: <span>Hipertrofia</span></p>
+        <p>Sugestões de Treinos:</p>
+        <ul>
+          <li>Treino de Resistência</li>
+          <li>Treino para Definição</li>
+          <li>Yoga e Alongamento</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://kit.fontawesome.com/4ac8bcd2f5.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

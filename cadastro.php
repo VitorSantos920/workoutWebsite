@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <?php
+    include_once "./cabecalho.php"
+    ?>
     <main>
         <section class="banner">
             <img src="./assets/img/login.png" alt="Mulher em uma academia segurando cordas nos ombros.">

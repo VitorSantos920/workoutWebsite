@@ -2,9 +2,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    
 }
-.landpage{
+.landpage {
     padding: 16rem 0;
     width: 80%;
     margin: 0 auto;
@@ -37,21 +36,25 @@ nav a {
     font-size: 1.6rem;
     font-weight: 600;
 }
-.landpage p, h2, h3, h4{
+
+.landpage p,
+h2,
+h3,
+h4 {
     letter-spacing: 1px;
 }
-.landpage p{
+.landpage p {
     font-size: 1.6rem;
     color: rgba(239, 237, 232, 0.65);
 }
-.landpage :is(h1, h2, h3, h4){
-    color: var(--text1)
+.landpage :is(h1, h2, h3, h4) {
+    color: var(--text1);
 }
 .section1 {
     display: flex;
     font-family: 'Inter', sans-serif;
 }
-.section1 .conteudo{
+.section1 .conteudo {
     width: 45%;
 }
 .section1 .conteudo h1 {
@@ -79,12 +82,12 @@ nav a {
     cursor: pointer;
     transition: 250ms;
 }
-.section1 .conteudo button[type='button']:hover{
+.section1 .conteudo button[type='button']:hover {
     transform: scale(1.05);
     background-color: #ff9382;
 }
 
-.section1 .conteudo .bottom{
+.section1 .conteudo .bottom {
     padding-top: 8rem;
 }
 .section1 .conteudo .bottom p {
@@ -97,7 +100,6 @@ nav a {
     display: flex;
     flex-direction: row;
     gap: 2rem;
-    
 }
 .img-hero {
     display: flex;
@@ -106,88 +108,84 @@ nav a {
     height: auto;
     max-width: 100%;
     align-self: flex-end;
-    
 }
 .section1 .conteudo {
     width: 60%;
 }
 
-.landpage h2{
+.landpage h2 {
     font-size: 3.5rem;
     font-weight: 600;
     line-height: 5rem;
     letter-spacing: 1px;
-   
 }
 
-.landpage :is(.section2, .section3, .section3 .box-imagem .conteudo){
+.landpage :is(.section2, .section3, .section3 .box-imagem .conteudo) {
     display: flex;
     flex-direction: column;
 }
 
-.section2{
+.section2 {
     gap: 2.5rem;
 }
-.section2 h2 + p{
+.section2 h2 + p {
     margin-bottom: 3rem;
 }
-.section2 .box-categorias{
+.section2 .box-categorias {
     display: flex;
     gap: 3rem;
-    
 }
-.section2 .box-categorias .box{
+.section2 .box-categorias .box {
     padding: 5rem 3.5rem;
     display: flex;
     gap: 1rem;
     justify-content: center;
     border-radius: 12px;
 }
-.section2 .box-categorias .box .seta{
+.section2 .box-categorias .box .seta {
     align-self: end;
 }
-.section2 .box-categorias .box h4{
+.section2 .box-categorias .box h4 {
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: 1px;
     padding-bottom: 1.7rem;
 }
-.section2 .box-categorias .box p{
+.section2 .box-categorias .box p {
     font-size: 1.4rem;
- 
 }
-.shapeSecondary1{
+.shapeSecondary1 {
     background-color: var(--shapeSecondary1);
 }
-.shapeSecondary2{
+.shapeSecondary2 {
     background-color: var(--shapeSecondary2);
 }
-.shapeSecondary3{
+.shapeSecondary3 {
     background-color: var(--shapeSecondary3);
 }
-.shapeSecondary4{
+.shapeSecondary4 {
     background-color: var(--shapeSecondary4);
 }
-.section3{
+.section3 {
     display: flex;
     flex-direction: column;
     gap: 12rem;
 }
-.section3 .box-imagem{
+.section3 .box-imagem {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.section3 .box-imagem img{
+.section3 .box-imagem img {
     width: 50%;
 }
-.section3 .box-imagem .conteudo{
+.section3 .box-imagem .conteudo {
     width: 40%;
 }
-.section3 .box-imagem h2 + p{
+.section3 .box-imagem h2 + p {
     padding: 4rem 0 4rem;
 }
-.landpage a{
+.landpage a {
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
     line-height: 2.6rem;
@@ -198,33 +196,34 @@ nav a {
     align-items: center;
     gap: 1rem;
 }
-.section3 .box-imagem a img, .section5 .box-categorias a img{
+.section3 .box-imagem a img,
+.section5 .box-categorias a img {
     width: auto;
 }
-.section5{
-    padding: 6rem 0 0 ;
+.section5 {
+    padding: 6rem 0 0;
     border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
-.section5 h2{
+.section5 h2 {
     padding-bottom: 6rem;
 }
-.section5 .box-categorias{
+.section5 .box-categorias {
     display: flex;
-   
+
     justify-content: space-between;
 }
-.section5 .box-categorias .box{
+.section5 .box-categorias .box {
     width: 47%;
     padding: 6rem 5rem 5rem;
     display: flex;
     flex-direction: column;
     gap: 2.6rem;
 }
-.section5 .box-categorias .box h3{
+.section5 .box-categorias .box h3 {
     text-align: center;
     font-size: 2.5rem;
 }
-.section5 .box-categorias .box ul{
+.section5 .box-categorias .box ul {
     color: rgba(239, 237, 232, 0.65);
     font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
@@ -232,14 +231,14 @@ nav a {
     letter-spacing: 1px;
     padding-bottom: 6rem;
 }
-.section5 .box-categorias .box a{
+.section5 .box-categorias .box a {
     margin-top: 3rem;
 }
-.section5 .box-categorias .box :is(p, ul){
+.section5 .box-categorias .box :is(p, ul) {
     font-size: 1.8rem;
     line-height: 2.4rem;
 }
-.section5 .box-categorias .box button{
+.section5 .box-categorias .box button {
     color: var(--text1);
     font-size: 1.6rem;
     font-family: 'Inter', sans-serif;
@@ -251,38 +250,37 @@ nav a {
     font-weight: 600;
 }
 
-
 .carousel {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     width: 100%;
-    height: 300px; 
+    height: 300px;
 }
 .carousel-item {
     flex: 0 0 auto;
     scroll-snap-align: start;
     width: 100%;
     height: 100%;
-    background-color: #ccc; 
+    background-color: #ccc;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem; 
+    font-size: 2rem;
 }
-nav ul .menu-icon{
+nav ul .menu-icon {
     display: none;
 }
-.menu-mobile{
+.menu-mobile {
     display: none;
 }
-.menu-icon button{
+.menu-icon button {
     border: none;
     background: none;
     color: var(--text1);
 }
-.vermelho{
+.vermelho {
     color: var(--button);
 }
 
@@ -299,13 +297,12 @@ nav ul .menu-icon{
     height: 7rem;
     border-radius: 50%;
     cursor: pointer;
- 
 }
 
 /* Medias */
 
-@media screen and (min-width: 1921px){
-    html{
+@media screen and (min-width: 1921px) {
+    html {
         font-size: 24px;
     }
     .img-hero img {
@@ -321,13 +318,12 @@ nav ul .menu-icon{
     }
 }
 @media screen and (max-width: 1700px) {
-    .section1 .conteudo{
+    .section1 .conteudo {
         width: 50%;
     }
-    
 }
 @media screen and (max-width: 1550px) {
-    .section1 .conteudo h1{
+    .section1 .conteudo h1 {
         font-size: 11vw;
         line-height: 100%;
     }
@@ -336,81 +332,79 @@ nav ul .menu-icon{
     }
 }
 @media screen and (max-width: 1310px) {
-    .landpage h2{
+    .landpage h2 {
         font-size: 3rem;
         line-height: 4rem;
     }
-    .landpage h3{
+    .landpage h3 {
         font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 1270px) {
-    .img-hero{
+    .img-hero {
         display: none;
     }
-    .section1 .conteudo{
+    .section1 .conteudo {
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        
     }
-    .section1 .conteudo h1{
+    .section1 .conteudo h1 {
         text-align: center;
     }
-    .section1 .conteudo p{
+    .section1 .conteudo p {
         text-align: center;
     }
-    .section1 .conteudo .bottom p{
+    .section1 .conteudo .bottom p {
         width: 100%;
     }
-    .brands{
+    .brands {
         align-items: center;
     }
-    .section2 .box-categorias .box{
+    .section2 .box-categorias .box {
         padding: 4rem 2.5rem;
     }
     .section3 .box-imagem .conteudo {
         width: 45%;
     }
-    html{
+    html {
         font-size: 55%;
     }
 }
 @media screen and (max-width: 1050px) {
-    .section1 .conteudo h1{
+    .section1 .conteudo h1 {
         font-size: 13vw;
         line-height: 100%;
     }
-    .section2 .box-categorias{
+    .section2 .box-categorias {
         flex-wrap: wrap;
         gap: 0;
         justify-content: space-between;
         row-gap: 2rem;
     }
-    .section2 .box-categorias .box{
+    .section2 .box-categorias .box {
         width: 47%;
     }
-    .landpage h2{
+    .landpage h2 {
         font-size: 2.8rem;
         line-height: 3rem;
     }
     .subir {
         right: 2%;
     }
- 
 }
-@media screen and (max-width: 950px){
-    .section3 .box-imagem{
+@media screen and (max-width: 950px) {
+    .section3 .box-imagem {
         flex-wrap: wrap;
         gap: 4rem;
-        
     }
-    .section3, .landpage{
+    .section3,
+    .landpage {
         gap: 8rem;
     }
-    .landpage{
+    .landpage {
         padding: 11rem 0;
         gap: 11rem;
     }
@@ -420,23 +414,21 @@ nav ul .menu-icon{
     .section3 .box-imagem > img {
         width: 100%;
     }
-    
 }
-@media screen and (max-width: 880px){
-    nav ul .menu-icon{
+@media screen and (max-width: 880px) {
+    nav ul .menu-icon {
         display: block;
-        
     }
-    nav ul button{
+    nav ul button {
         cursor: pointer;
     }
-    nav ul li{
+    nav ul li {
         display: none;
     }
-    nav{
+    nav {
         align-items: center;
     }
-    .menu-mobile{
+    .menu-mobile {
         background-color: rgba(255, 255, 255, 0.041);
         /* position: absolute;
         right: 0;
@@ -444,7 +436,7 @@ nav ul .menu-icon{
         margin-top: 2rem;
         padding: 2rem 5rem;
     }
-    .menu-mobile ul{
+    .menu-mobile ul {
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -452,7 +444,6 @@ nav ul .menu-icon{
     .menu-mobile li {
         margin: 1.5rem 0;
         display: block;
-
     }
     .menu-mobile a {
         font-family: 'Inter', sans-serif;
@@ -460,76 +451,73 @@ nav ul .menu-icon{
         font-weight: 600;
         text-transform: uppercase;
         color: var(--text1);
-        
     }
-    .menu-mobile a.vermelho{
+    .menu-mobile a.vermelho {
         color: var(--button);
     }
-    .abrir{
+    .abrir {
         display: block;
     }
-    .subir{
+    .subir {
         width: 6rem;
         height: 6rem;
         right: 1.5%;
         bottom: 3rem;
     }
-    
 }
 @media screen and (max-width: 776px) {
-    .landpage{
+    .landpage {
         padding: 10rem 0;
         gap: 10rem;
     }
-    .section1 .conteudo .brands{
+    .section1 .conteudo .brands {
         gap: 1rem;
         max-width: fit-content;
         display: inline;
     }
-    .brands img{
+    .brands img {
         max-width: 20%;
         margin-left: 1rem;
         margin-bottom: 1rem;
     }
-    .section1 .conteudo button[type='button']{
+    .section1 .conteudo button[type='button'] {
         width: 100%;
     }
-    .section1 .conteudo p{
+    .section1 .conteudo p {
         width: 100%;
     }
-    .section3 .box-imagem .conteudo p{
+    .section3 .box-imagem .conteudo p {
         padding: 3rem 0;
     }
-    .section5 .box-categorias{
+    .section5 .box-categorias {
         flex-wrap: wrap;
         gap: 6rem;
     }
-    .section5 .box-categorias .box{
+    .section5 .box-categorias .box {
         width: 100%;
     }
-    .section5 .box-categorias .box ul{
+    .section5 .box-categorias .box ul {
         padding-bottom: 0;
     }
-    .section5 .box-categorias .box button{
+    .section5 .box-categorias .box button {
         margin-top: 3rem;
     }
-
 }
 
 @media screen and (max-width: 480px) {
-    .section1 .conteudo .bottom{
+    .section1 .conteudo .bottom {
         padding-top: 5rem;
     }
-    .section2 .box-categorias .box{
+    .section2 .box-categorias .box {
         width: 100%;
     }
-    .section5 .box-categorias .box{
+    .section5 .box-categorias .box {
         padding: 4rem 3rem 3rem 4rem;
     }
-    .landpage h2{
+    .landpage h2 {
         font-size: 2.5rem;
     }
-    .menu-mobile a.vermelho{
+    .menu-mobile a.vermelho {
         width: 100%;
         display: block;
         border-radius: 5px;

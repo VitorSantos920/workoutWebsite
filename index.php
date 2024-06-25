@@ -7,40 +7,17 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="Vitor Santos, Diógene Gabriel e Ingrid Norberto">
+    <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
     <title>Workout | Academia</title>
     <link rel="stylesheet" href="./assets/css/index.css?time=<?= time() ?>">
-    <script src="https://kit.fontawesome.com/8a4fb0877d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <?php
+    include_once "./cabecalho.php";
+    ?>
 
-    <nav>
-        <a href="#">workout</a>
-        <ul>
-            <div class="menu-icon">
-                <button onClick="menuShow()"><i class="fa-solid fa-bars  fa-2xl"></i></button>
-            </div>
-            <li><a href="#">treinos</a></li>
-            <li><a href="#">dietas</a></li>
-            <li><a href="#">dietas</a></li>
-            <li><a href="#">vida saudavel</a></li>
-            <li><a href="#">comunidade</a></li>
-            <li><a href="./cadastro.php">Cadastrar</a></li>
-            <li><a href="./login.php" class="vermelho">Entrar</a></li>
-        </ul>
-    </nav>
-    <div class="menu-mobile">
-        <ul>
-            <li><a href="#">treinos</a></li>
-            <li><a href="#">dietas</a></li>
-            <li><a href="#">dietas</a></li>
-            <li><a href="#">vida saudavel</a></li>
-            <li><a href="#">comunidade</a></li>
-            <li><a href="./cadastro.php">Cadastrar</a></li>
-            <li><a href="./login.php" class="vermelho">Entrar</a></li>
-        </ul> 
-    </div>
-    
+
     <div class="landpage">
         <div class="section1">
             <div class="conteudo">
@@ -122,13 +99,13 @@
             </div>
             <div class="box-imagem">
                 <img src="assets/img/training.png" alt="">
-                    <div class="conteudo">
-                        <h2>Obtenha mais com programas de treinamento de baixo custo e recursos avançados.</h2>
-                        <p>Acreditamos que o fitness deve ser acessível a todos, em qualquer lugar, independentemente do rendimento ou do acesso a um ginásio. Com centenas de treinos profissionais, receitas saudáveis ​​e artigos informativos, bem como uma das comunidades mais positivas da web, você terá tudo o que precisa para atingir seus objetivos pessoais de condicionamento físico – de graça!</p>
-                        <a href="#">Veja mais
-                            <img src="assets/img/arrow-right.png" alt="">
-                        </a>
-                    </div>
+                <div class="conteudo">
+                    <h2>Obtenha mais com programas de treinamento de baixo custo e recursos avançados.</h2>
+                    <p>Acreditamos que o fitness deve ser acessível a todos, em qualquer lugar, independentemente do rendimento ou do acesso a um ginásio. Com centenas de treinos profissionais, receitas saudáveis ​​e artigos informativos, bem como uma das comunidades mais positivas da web, você terá tudo o que precisa para atingir seus objetivos pessoais de condicionamento físico – de graça!</p>
+                    <a href="#">Veja mais
+                        <img src="assets/img/arrow-right.png" alt="">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="section5">
@@ -171,6 +148,8 @@
     <button class="subir" onclick="scrollToTop()"><img src="./assets/img/arrow-top.png"></button>
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/sweetalert2@11.js"></script>
+    <script src="https://kit.fontawesome.com/8a4fb0877d.js" crossorigin="anonymous"></script>
+
     <script src="./assets/js/index.js"></script>
 </body>
 

@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <?php
+    include_once "./cabecalho.php";
+
+    ?>
     <main>
         <section class="banner">
             <img src="./assets/img/login.png" alt="">
@@ -48,6 +52,8 @@
 
     <script src="./assets/js/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/sweetalert2@11.js"></script>
+    <script src="https://kit.fontawesome.com/4ac8bcd2f5.js" crossorigin="anonymous"></script>
+
     <script src="./assets/js/login.js"></script>
 </body>
 

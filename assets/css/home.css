@@ -1,1 +1,138 @@
 @import url(./global.css);
+
+body {
+    background-color: var(--black);
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+}
+
+nav {
+    align-items: center;
+    margin: 3em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 3em;
+    color: var(--text1);
+    text-transform: uppercase;
+}
+nav li {
+    margin: 0 1.5em;
+    display: inline;
+}
+nav :is(li:not(li > a, .progress-training li), li a) {
+    font-size: 0.75rem;
+}
+nav a,
+li:not(li > a, .progress-training li) {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+nav ul .menu-icon {
+    display: none;
+}
+.menu-mobile {
+    display: none;
+}
+.menu-icon button {
+    border: none;
+    background: none;
+    color: var(--text1);
+}
+
+main {
+    padding: 0 3rem;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.profile-initial,
+.progress,
+.training,
+.informations {
+    min-width: max-content;
+    background-color: rgba(255, 255, 255, 0.17);
+    padding: 1.75rem;
+    border: 3px solid;
+    border-radius: 0.75rem;
+    transition: 250ms;
+}
+
+:is(.progress, .training, .informations):hover {
+    border-color: var(--button);
+}
+
+.profile-initial {
+    display: flex;
+    align-items: center;
+    padding-left: 5rem;
+    gap: 1rem;
+    position: relative;
+    transition: 250ms;
+}
+
+.profile-initial svg {
+    font-size: 2.5rem;
+    transition: 250ms;
+    position: absolute;
+    right: 90%;
+}
+
+.profile-initial:hover svg {
+    color: var(--button);
+    transform: rotate(90deg);
+    right: 10%;
+}
+
+.profile-initial h1 {
+    margin-bottom: 0.45rem;
+}
+
+.profile-initial:hover {
+    padding-left: 2.5rem;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    border-color: var(--button);
+}
+
+.progress-training {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.profile-initial,
+.progress-training,
+.informations {
+    margin-top: 1rem;
+    max-width: 50%;
+}
+
+:is(.profile-initial, .progress-training, .informations) :is(p, li) {
+    margin-top: 0.5rem;
+}
+
+.progress,
+.training {
+    flex-grow: 1;
+}
+
+:is(.progress, .training, .informations) h2 {
+    margin-bottom: 0.5rem;
+    color: var(--button);
+}
+
+:is(.progress, .training, .informations) h2,
+h1 {
+    color: var(--button);
+}
+
+.training .plan span {
+    text-decoration: underline;
+}
+
+.training ul {
+    list-style: circle;
+    list-style-position: inside;
+}
