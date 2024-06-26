@@ -28,7 +28,7 @@ $dadosUsuario = DB::queryFirstRow("SELECT * FROM usuario WHERE usuario.email = %
   <?php
   include_once "./cabecalho.php";
   ?>
-  <main style="padding: 0 3rem; max-width: 1366px; margin: 0 auto;">
+  <main>
     <section class="profile-initial">
       <i class="fa-solid fa-hand-fist"></i>
       <a href="profile.php">

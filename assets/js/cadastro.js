@@ -118,7 +118,7 @@ function cadastrarUsuario() {
                     );
 
                     setTimeout(() => {
-                        window.location.href = './home.php';
+                        window.location.href = './login.php';
                     }, 1500);
                     break;
                 case 0:

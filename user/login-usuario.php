@@ -21,6 +21,7 @@ try {
 
   $_SESSION['session_id'] = session_id();
   $_SESSION['email'] = $_POST['email'];
+  $_SESSION['categoria'] = $usuario['categoria'];
 
   echo json_encode(["status" => 1, "swalMessage" => "Login realizado com sucesso. Redirecionando..."]);
 } catch (\Throwable $th) {

@@ -1,11 +1,5 @@
 @import url(./global.css);
 
-body {
-    background-color: var(--black);
-    font-family: 'Inter', sans-serif;
-    color: #fff;
-}
-
 nav {
     align-items: center;
     margin: 3em 0;

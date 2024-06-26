@@ -1,0 +1,93 @@
+@import url(./global.css);
+
+nav {
+    align-items: center;
+    margin: 3em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 5em;
+    color: var(--text1);
+    text-transform: uppercase;
+}
+nav li {
+    margin: 0 1.5em;
+    display: inline;
+}
+nav li a {
+    font-size: 0.75rem;
+}
+
+nav :is(li:not(li > a, .progress-training li), li a) {
+    font-size: 0.75rem;
+}
+
+nav a {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+nav ul .menu-icon {
+    display: none;
+}
+.menu-mobile {
+    display: none;
+}
+.menu-icon button {
+    border: none;
+    background: none;
+    color: var(--text1);
+}
+
+.main {
+    padding: 0 3rem;
+    max-width: 1366px;
+    margin: 0 auto;
+}
+
+.main table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--button);
+}
+
+.main table thead th {
+    background-color: var(--button);
+    text-align: left;
+}
+
+.main table :is(td, th) {
+    padding: 0.75rem;
+}
+
+.main table tr:hover {
+    background-color: rgba(255, 120, 99, 0.274);
+}
+
+.main table .btn:not(.btn.btn-danger) {
+    background-color: var(--button);
+    color: var(--text1);
+}
+
+.main table .btn:active {
+    background-color: var(--button);
+}
+
+.main table .btn:not(.btn.btn-danger):hover {
+    background-color: #be4330;
+}
+
+.main table .dropdown-menu.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main table .dropdown-menu li {
+    width: 90%;
+}
+
+.main table .dropdown-menu li button {
+    width: 100%;
+}

@@ -13,7 +13,6 @@ body {
 }
 html {
     font-size: 62.5%;
-    background-color: var(--black);
 }
 nav {
     margin-top: 4rem;
