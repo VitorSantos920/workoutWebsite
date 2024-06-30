@@ -11,5 +11,5 @@ try {
   DB::delete("usuario", "id = %i", $_POST['idUsuario']);
   echo json_encode(["status" => 1, "swalMessage" => "O usuário \"{$dadosUsuario['nome']}\" de ID {$dadosUsuario['id']} foi excluído com sucesso do sistema!"]);
 } catch (\Throwable $err) {
-  //throw $th;
+  echo json_encode(["status" => -1, "swalMessage" => "Ocorreu um erro interno ao excluir o usuário. Tente novamente mais tarde!"]);
 }

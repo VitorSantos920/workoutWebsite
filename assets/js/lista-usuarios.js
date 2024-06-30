@@ -24,12 +24,24 @@ function excluirUsuario(idUsuario) {
                 },
                 success: function (response) {
                     response = JSON.parse(response);
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Usuário excluído',
-                        text: response.swalMessage,
-                    });
-                    carregaTabelaUsuarios();
+                    switch (response.status) {
+                        case 1:
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Usuário excluído',
+                                text: response.swalMessage,
+                            });
+                            carregaTabelaUsuarios();
+
+                            break;
+                        case -1:
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Erro interno',
+                                text: response.swalMessage,
+                            });
+                            break;
+                    }
                 },
             });
         }
@@ -75,4 +87,3 @@ function pesquisarUsuario(valorPesquisa) {
         error: (err) => console.log(err),
     });
 }
-Vitor2004$;
