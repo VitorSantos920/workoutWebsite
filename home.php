@@ -40,7 +40,12 @@ $dadosUsuario = DB::queryFirstRow("SELECT * FROM usuario WHERE usuario.email = %
       <h2><i class="fa-solid fa-circle-info"></i> Suas Informações</h2>
       <p>Email: <?php echo $dadosUsuario['email'] ?></p>
       <p>Telefone: <?php echo $dadosUsuario['telefone'] ?></p>
-      <p>Cadastrou-se em: <?php echo date('d/m/Y h:i:s', strtotime($dadosUsuario['cadastrado_em'])) ?></p>
+      <?php
+      $dataCadastro = date('d/m/Y h:i:s', strtotime($dadosUsuario['cadastrado_em']));
+      $dataCadastroFormatada = explode(" ", $dataCadastro);
+
+      ?>
+      <p>Cadastrou-se em: <?php echo  $dataCadastroFormatada[0] . " às " . $dataCadastroFormatada[1] ?></p>
     </section>
 
     <section class="progress-training">

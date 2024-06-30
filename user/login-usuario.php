@@ -20,6 +20,7 @@ try {
   ]);
 
   $_SESSION['session_id'] = session_id();
+  $_SESSION['id'] = $usuario['id'];
   $_SESSION['email'] = $_POST['email'];
   $_SESSION['categoria'] = $usuario['categoria'];
 

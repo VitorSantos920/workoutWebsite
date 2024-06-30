@@ -43,7 +43,19 @@ if (session_status() == PHP_SESSION_NONE) {
       <li><a href="#">dietas</a></li>
       <li><a href="#">vida saudavel</a></li>
       <li><a href="#">comunidade</a></li>
-
+      <?php
+      if ($_SESSION['email'] != "") {
+        echo "<li><a href='./home.php'>Home</a></li>";
+        if ($_SESSION['categoria'] == "Administrador") {
+          echo "<li><a href='./lista-usuarios.php'>Lista de Usuários</a></li>";
+        }
+        echo "<li>{$_SESSION['email']}</li>
+        <li><a href='./user/logout.php'>Sair</a></li>";
+      } else {
+        echo "<li><a href='./cadastro.php'>Cadastrar</a></li>
+        <li><a href='./login.php' class='vermelho'>Entrar</a></li>";
+      }
+      ?>
     </ul>
   </div>
 </header>

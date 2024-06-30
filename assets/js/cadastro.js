@@ -97,7 +97,10 @@ function cadastrarUsuario() {
         return;
     }
 
-    if (!verificaNomeUsuario(dadosUsuario.nome)) {
+    if (
+        !verificaNomeUsuario(dadosUsuario.nome) ||
+        !verificaEmailUsuario(dadosUsuario.email)
+    ) {
         return;
     }
 
@@ -190,6 +193,24 @@ function verificaNomeUsuario(nome) {
             sweetAlert('error', 'Erro ao cadastrar o usuário', mensagem);
             return false;
         }
+    }
+
+    return true;
+}
+
+function verificaEmailUsuario(email) {
+    console.log('verificando');
+
+    const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+    if (!regexEmail.test(email)) {
+        Swal.fire({
+            icon: 'error',
+            title: `Erro ao cadastrar`,
+            text: `Não é possível cadastrar um usuário com este email. Verifique-o e tente novamente!`,
+        });
+
+        return false;
     }
 
     return true;

@@ -46,10 +46,31 @@ nav ul .menu-icon {
     margin: 0 auto;
 }
 
+.main #pesquisa {
+    background-color: transparent;
+    border-color: var(--button);
+    color: var(--text1);
+    margin-bottom: 0.75rem;
+    width: 40%;
+    min-width: 25%;
+}
+
+.main #pesquisa::placeholder {
+    color: #e0e0e07b;
+}
+
+.main #pesquisa:focus {
+    box-shadow: none;
+}
+
 .main table {
     width: 100%;
     border-collapse: collapse;
     border: 1px solid var(--button);
+}
+
+.main table tr {
+    border-bottom: 1px solid var(--button);
 }
 
 .main table thead th {
@@ -90,4 +111,55 @@ nav ul .menu-icon {
 
 .main table .dropdown-menu li button {
     width: 100%;
+}
+
+@media screen and (max-width: 880px) {
+    nav ul .menu-icon {
+        display: block;
+    }
+    nav ul button {
+        cursor: pointer;
+    }
+    nav ul li {
+        display: none;
+    }
+    nav {
+        align-items: center;
+    }
+    .menu-mobile {
+        background-color: rgba(255, 255, 255, 0.041);
+        /* position: absolute;
+        right: 0;
+        top: 7rem; */
+        margin-top: 2rem;
+        padding: 2rem 5rem;
+    }
+    .menu-mobile ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu-mobile li {
+        margin: 1.5rem 0;
+        display: block;
+    }
+    .menu-mobile a {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--text1);
+    }
+    .menu-mobile a.vermelho {
+        color: var(--button);
+    }
+    .abrir {
+        display: block;
+    }
+    .subir {
+        width: 6rem;
+        height: 6rem;
+        right: 1.5%;
+        bottom: 3rem;
+    }
 }

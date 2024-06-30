@@ -27,7 +27,7 @@
             <form>
                 <fieldset>
                     <label for="email">Email:</label>
-                    <input type="text" name="email" id="email" placeholder="example@mail.com" required />
+                    <input type="email" name="email" id="email" placeholder="example@mail.com" required />
                 </fieldset>
                 <fieldset>
                     <label for="senha">Senha:</label>

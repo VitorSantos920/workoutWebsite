@@ -25,3 +25,13 @@ body {
     font-family: 'Inter', sans-serif;
     color: #fff;
 }
+
+body div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    background-color: var(--button);
+}
+
+body div:where(.swal2-container) div:where(.swal2-popup) {
+    color: var(--text1);
+    background-color: var(--black);
+    border: 3px solid var(--button);
+}

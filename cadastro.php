@@ -32,12 +32,12 @@
 
                 <fieldset>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="on">
+                    <input type="email" id="email" name="email" placeholder="exemplo@email.com.br" required autocomplete="on">
                 </fieldset>
 
                 <fieldset>
                     <label for="telefone">Telefone</label>
-                    <input type="tel" name="telefone" id="telefone" placeholder="(DD) TTTTT-TTTT">
+                    <input type="tel" name="telefone" id="telefone" placeholder="(99) 99999-9999">
                 </fieldset>
 
                 <div class="password-content">
