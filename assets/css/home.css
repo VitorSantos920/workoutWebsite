@@ -99,8 +99,7 @@ main {
 .profile-initial,
 .progress-training,
 .informations {
-    margin-top: 1rem;
-    max-width: 50%;
+    margin-bottom: 1rem;
 }
 
 :is(.profile-initial, .progress-training, .informations) :is(p, li) {
@@ -114,10 +113,9 @@ main {
 
 :is(.progress, .training, .informations) h2 {
     margin-bottom: 0.5rem;
-    color: var(--button);
 }
 
-:is(.progress, .training, .informations) h2,
+:is(.progress, .training, .informations, .treinos) h2,
 h1 {
     color: var(--button);
 }

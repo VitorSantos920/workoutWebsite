@@ -21,6 +21,7 @@ $usuario = DB::queryFirstRow("SELECT * FROM usuario WHERE id = %i", $_SESSION['i
   <title>Workout | Perfil do Usuário</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
   <link rel="stylesheet" href="./assets/css/perfil.css">
   <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/x-icon">
 </head>
@@ -36,29 +37,81 @@ $usuario = DB::queryFirstRow("SELECT * FROM usuario WHERE id = %i", $_SESSION['i
     <h1>Seja bem-vindo(a) ao seu perfil Workout, <?php echo $usuario['nome'] ?>!</h1>
     <p>Edite suas informações de perfil abaixo.</p>
 
-    <form>
-      <input type="hidden" id="id-usuario" name="id-usuario" value="<?php echo $_SESSION['id'] ?>">
-      <fieldset>
-        <label for="nome">Nome:</label>
-        <input type="text" class="form-control" id="nome" placeholder="Seu nome" name="nome" value="<?php echo $usuario['nome'] ?>">
-      </fieldset>
-      <fieldset>
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Seu email" name="email" value="<?php echo $usuario['email'] ?>">
-      </fieldset>
-      <fieldset>
-        <label for="telefone">Telefone:</label>
-        <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Seu telefone" value="<?php echo $usuario['telefone'] ?>">
-      </fieldset>
+    <section class="section">
 
-      <button type="button" class="btn" id="btn-editar" onclick="editarPerfil()">Editar</button>
-    </form>
+      <div class="informacoes-usuario">
+        <form>
+          <input type="hidden" id="id-usuario" name="id-usuario" value="<?php echo $_SESSION['id'] ?>">
+          <fieldset>
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" placeholder="Seu nome" name="nome" value="<?php echo $usuario['nome'] ?>">
+          </fieldset>
+          <fieldset>
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Seu email" name="email" value="<?php echo $usuario['email'] ?>">
+          </fieldset>
+          <fieldset>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="Seu telefone" value="<?php echo $usuario['telefone'] ?>">
+          </fieldset>
+
+          <button type="button" class="btn" id="btn-editar" onclick="editarPerfil()">Editar</button>
+        </form>
+      </div>
+
+      <div class="treinos">
+        <h2>Seus treinos</h2>
+        <p>Defina seus treinos atuais arrastando-os à coluna ao lado, de acordo com os disponíveis na lista abaixo.</p>
+        <div class="listas-treino d-flex justify-content-between gap-2">
+          <div>
+
+            <h3>Treinos Disponíveis</h3>
+            <ul id="treinos-disponiveis" class="list-group flex-grow-1">
+              <?php
+              $treinos = DB::query("SELECT t.id, t.nome_identificador, t.nome FROM treinos_usuario tu RIGHT JOIN treino t ON tu.treino = t.id ORDER BY t.nome");
+
+              foreach ($treinos as $treino) {
+                $treinoId = $treino['id'];
+
+                $usuarioJaPossuiTreino = DB::queryFirstField("SELECT treino FROM treinos_usuario tu WHERE tu.treino = %i AND tu.usuario = %i", $treinoId, $_SESSION['id']);
+
+                if (empty($usuarioJaPossuiTreino)) {
+                  echo "
+                      <li class='list-group-item' id='{$treino['nome_identificador']}'>{$treino['nome']}</li>
+                    ";
+                }
+              }
+              ?>
+
+            </ul>
+
+          </div>
+
+          <div>
+            <h3>Treinos Escolhidos</h3>
+            <ul id="treinos-escolhidos" class="list-group flex-grow-1">
+              <?php
+              $treinosDoUsuario = DB::query("SELECT t.nome_identificador, t.nome as 'nome_treino' FROM treino t INNER JOIN treinos_usuario tu ON t.id = tu.treino INNER JOIN usuario u ON tu.usuario = u.id WHERE u.id = %i", $_SESSION['id']);
+              foreach ($treinosDoUsuario as $treino) {
+                echo "
+                  <li class='list-group-item' id='{$treino['nome_identificador']}'>{$treino['nome_treino']}</li>
+          ";
+              }
+              ?>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
 
   <script src="./assets/js/jquery-3.7.1.min.js"></script>
   <script src="./assets/js/sweetalert2@11.js"></script>
   <script src="https://kit.fontawesome.com/4ac8bcd2f5.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+
   <script src="./assets/js/perfil.js"></script>
 
 </body>

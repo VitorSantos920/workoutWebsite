@@ -41,14 +41,14 @@ main {
     margin: 0 auto;
 }
 
-h1 + p {
+:is(h1, h2) + p {
     opacity: 0.5;
     margin-top: 0.75rem;
 }
 
 main fieldset {
     margin-top: 0.75rem;
-    width: 30%;
+    width: 90%;
 }
 
 main :is(.form-control, .form-control:focus) {
@@ -73,6 +73,33 @@ main button.btn {
 
 main button.btn:hover {
     background-color: var(--button);
+}
+
+main .section {
+    display: flex;
+}
+
+main .section :is(.informacoes-usuario, .treinos) {
+    min-width: 50%;
+}
+
+ul li.list-group-item {
+    border-color: var(--button);
+    background-color: transparent;
+    color: var(--text1);
+}
+
+main :is(#treinos-disponiveis, #treinos-escolhidos) {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+main :is(#treinos-disponiveis, #treinos-escolhidos)::-webkit-scrollbar {
+    width: 0.75rem;
+}
+
+main :is(#treinos-disponiveis, #treinos-escolhidos)::-webkit-scrollbar-thumb {
+    background: var(--button);
 }
 
 @media screen and (max-width: 880px) {
